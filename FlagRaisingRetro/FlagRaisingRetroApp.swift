@@ -13,5 +13,6 @@ struct FlagRaisingRetroApp: App {
         WindowGroup {
             ContentView()
         }
+        .windowStyle(HiddenTitleBarWindowStyle())
     }
 }
