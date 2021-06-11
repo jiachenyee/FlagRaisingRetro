@@ -66,20 +66,37 @@ struct ContentView: View {
                 }
                 .padding()
                 
-                ZStack {
-                    Color.black
-                        .offset(x: 2, y: 2)
-                    Color.white
-                        .border(Color.black, width: 2)
+                HStack {
+                    ZStack {
+                        Color.black
+                            .offset(x: 2, y: 2)
+                        Color.white
+                            .border(Color.black, width: 2)
+                        
+                        Text("Raise")
+                            .font(.system(size: 20, weight: .heavy, design: .monospaced))
+                    }
+                    .frame(width: 150, height: 50)
+                    .onTapGesture {
+                        offset -= 10
+                    }
+                    .padding()
                     
-                    Text("Raise")
-                        .font(.system(size: 20, weight: .heavy, design: .monospaced))
+                    ZStack {
+                        Color.black
+                            .offset(x: 2, y: 2)
+                        Color.white
+                            .border(Color.black, width: 2)
+                        
+                        Text("About")
+                            .font(.system(size: 20, weight: .heavy, design: .monospaced))
+                    }
+                    .frame(width: 150, height: 50)
+                    .onTapGesture {
+                        NSWorkspace.shared.open(URL(string: "https://www.youtube.com/watch?v=dQw4w9WgXcQ")!)
+                    }
+                    .padding()
                 }
-                .frame(width: 150, height: 50)
-                .onTapGesture {
-                    offset -= 10
-                }
-                .padding()
             }
         }
         .colorScheme(.light)
