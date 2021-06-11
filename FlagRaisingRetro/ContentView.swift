@@ -72,9 +72,11 @@ struct ContentView: View {
                             .offset(x: 2, y: 2)
                         Color.white
                             .border(Color.black, width: 2)
-                        
-                        Text("Raise")
-                            .font(.system(size: 20, weight: .heavy, design: .monospaced))
+                        HStack {
+                            Image(systemName: "arrow.up")
+                            Text("Raise")
+                        }
+                        .font(.system(size: 20, weight: .heavy, design: .monospaced))
                     }
                     .frame(width: 150, height: 50)
                     .onTapGesture {
@@ -88,8 +90,11 @@ struct ContentView: View {
                         Color.white
                             .border(Color.black, width: 2)
                         
-                        Text("About")
-                            .font(.system(size: 20, weight: .heavy, design: .monospaced))
+                        HStack {
+                            Image(systemName: "info.circle")
+                            Text("Info")
+                        }
+                        .font(.system(size: 20, weight: .heavy, design: .monospaced))
                     }
                     .frame(width: 150, height: 50)
                     .onTapGesture {
