@@ -25,6 +25,7 @@ struct ContentView: View {
                             }
                         }
                         Text("Flag Raising")
+                            .lineLimit(1)
                             .font(.system(size: 24, weight: .heavy, design: .monospaced))
                             .padding(.horizontal, 5)
                         VStack(spacing: 2) {
